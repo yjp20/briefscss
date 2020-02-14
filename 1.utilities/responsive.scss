@@ -1,0 +1,11 @@
+@mixin gt($bp) {
+	@media only screen and (min-width: $bp) {
+		@content;
+	}
+}
+
+@mixin lt($bp) {
+	@media only screen and (max-width: $bp) {
+		@content;
+	}
+}

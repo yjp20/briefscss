@@ -1,0 +1,26 @@
+$card-color: inherit !default;
+$card-background-color: white !default;
+$card-border: 1px solid #ccc !default;
+$card-border-radius: $radius !default;
+$card-border-inner: $card-border !default;
+
+.card {
+	color: $card-color;
+	background-color: $card-background-color;
+	border: $card-border;
+	border-radius: $card-border-radius;
+
+	.card-header {
+		box-shadow: 0 -1px 0 0 #00000021;
+		padding: 1em;
+	}
+
+	.card-body {
+		padding: 1em;
+		//TODO
+	}
+
+	> * + * {
+		border-top: $card-border-inner;
+	}
+}

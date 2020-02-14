@@ -1,0 +1,36 @@
+$family: $family-sans-serif;
+$paragraph-margin-bottom: 1em !default;
+$label-color: map-get($colors, grey) !default;
+$label-font-size: 0.85em !default;
+$label-margin-bottom: 0.5em !default;
+
+
+body {
+	font-family: $family;
+}
+
+.title {
+	font-size: 3em;
+	margin-bottom: 1em;
+}
+
+.subtitle {
+	font-size: 2em;
+	margin-bottom: 1em;
+}
+
+.paragraph {
+	margin-bottom: $paragraph-margin-bottom;
+}
+
+.label {
+	color: $label-color;
+	font-size: $label-font-size;
+	margin-bottom: $label-margin-bottom;
+
+	&.is-caps {
+		text-transform: uppercase;
+		letter-spacing: 0.23em;
+		transform: scale(1, 0.95);
+	}
+}
