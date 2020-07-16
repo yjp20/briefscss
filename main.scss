@@ -1,7 +1,13 @@
+@import "1.utilities/reset";
+@import "1.utilities/responsive";
+@import "1.utilities/variables";
+
 @import "2.base/typography.scss";
 @import "2.base/utils.scss";
 @import "2.base/form.scss";
+
 @import "3.layout/columns";
 @import "3.layout/container";
+
 @import "4.elements/card";
 @import "4.elements/button";

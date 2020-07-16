@@ -1,0 +1,19 @@
+$section-large-padding: 4em;
+$section-medium-padding: 2em;
+$section-normal-padding: 2em;
+
+.section {
+	padding: $section-normal-padding 0;
+
+	&.is-medium {
+		padding: $section-medium-padding 0;
+	}
+	&.is-large {
+		padding: $section-large-padding 0;
+	}
+	&.is-fullheight {
+		box-sizing: border-box;
+		min-height: 100vh;
+	}
+}
+
