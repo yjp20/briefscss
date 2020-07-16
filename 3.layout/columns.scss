@@ -5,7 +5,7 @@ $columns-margin-bottom: 1.5em;
 /*
 
 I don't think there is almost ever a scenario when you want columns to be flex
-when and only when it's smaller. Working with that assumption, `columns
+if and only if it's smaller. Working with that assumption, `columns
 is-desktop` defines that you want it to only begin being a columns after the
 desktop breakpoint.
 
