@@ -1,12 +1,14 @@
-# BriefCSS
+# briefscss
 
-BreifCSS is a CSS framework built for me and my personal projects.
+briefscss is a CSS framework built for me and my personal projects. However, it
+has a strong emphasis on code quality and modularity, which makes it an apt fit
+for other projects too.
 
-Like Bulma, Brief is designed with readable CSS classes and sensible code
-design in mind. Brief uses no JS components. However, Brief opts for different
-design choices (no `is-danger`, just `is-red`). Furthermore, the code is more
-programmatically generated than Bulma, making it, in some senses, more
-customizable.
+Like Bulma, Briefs is designed with readable CSS classes and sensible code
+design in mind. Briefs also uses no JS components. However, Briefs opts for
+different design choices (no `is-danger`, just `is-red`). Furthermore, the code
+opts to be more programmatically generated using variables, reducing the size
+of the source.
 
 Ultimately, Brief attempts to trim the fat of larger CSS projects while also
 allowing developers to add touches of their own more easily on top of what

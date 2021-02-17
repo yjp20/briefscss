@@ -2,21 +2,20 @@
 	"name": "briefscss",
 	"version": "0.0.1",
 	"description": "Briefs is inspired by Bulma but made to be simpler and more flexible.",
-	"main": "brief.scss",
+	"main": "css/briefs.css",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/yjp20/briefcss.git"
 	},
 	"files": [
 		"css",
-		"sass",
-		"brief.scss",
-		"main.scss",
-		"init.scss",
+		"src",
+		"briefs.scss",
 		"README.md"
 	],
 	"scripts": {
-		"start": "npm run build-sass -- --watch",
+		"start": "npm run build:sass -- --watch",
+		"prepublish": "npm run build",
 		"build": "npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
 		"build:sass": "node-sass --output-style expanded --source-map true brief.scss css/brief.css",
 		"build:autoprefix": "postcss --use autoprefixer --map false --output css/brief.css css/brief.css",
