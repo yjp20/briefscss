@@ -16,21 +16,23 @@
 	"scripts": {
 		"start": "npm run build:sass -- --watch",
 		"prepublish": "npm run build",
+		"dev": "nodemon --watch src -e scss --exec npm run build:sass",
 		"build": "npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
-		"build:sass": "node-sass --output-style expanded --source-map true brief.scss css/brief.css",
-		"build:autoprefix": "postcss --use autoprefixer --map false --output css/brief.css css/brief.css",
-		"build:cleancss": "cleancss -o css/brief.min.css css/brief.css"
+		"build:sass": "node-sass --output-style expanded --source-map true briefs.scss css/briefs.css",
+		"build:autoprefix": "postcss --use autoprefixer --map false --output css/briefs.css css/briefs.css",
+		"build:cleancss": "cleancss -o css/briefs.min.css css/briefs.css"
 	},
 	"author": "Young Jin Park",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/yjp20/briefcss/issues"
+		"url": "https://github.com/yjp20/briefscss/issues"
 	},
-	"homepage": "https://github.com/yjp20/briefcss#readme",
+	"homepage": "https://github.com/yjp20/briefscss#readme",
 	"devDependencies": {
 		"autoprefixer": "^9.8.5",
 		"clean-css-cli": "^4.3.0",
 		"node-sass": "^4.14.1",
+		"nodemon": "^2.0.7",
 		"postcss-cli": "^7.1.1"
 	}
 }

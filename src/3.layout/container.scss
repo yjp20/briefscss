@@ -9,4 +9,10 @@
 			width: $bp;
 		}
 	}
+
+	@each $name, $bp in $breakpoints {
+		&.max-width-#{$name} {
+			max-width: $bp;
+		}
+	}
 }

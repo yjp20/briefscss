@@ -1,0 +1,19 @@
+$box-background-color: map-get($colors, "white") !default;
+$box-padding: 0.75rem !default;
+$box-border: $border !default;
+$box-border-width: $border-width !default;
+$box-border-radius: $radius !default;
+
+.box {
+	display: flex;
+	background-color: $box-background-color;
+	border-color: $box-border;
+	border-width: $box-border-width;
+	border-style: solid;
+	border-radius: $box-border-radius;
+	padding: $box-padding;
+
+	&.is-vertical {
+		flex-direction: column;
+	}
+}

@@ -1,58 +1,71 @@
-$family:                   $family-sans-serif;
-$title-margin-bottom:      0.5em !default;
-$subtitle-margin-bottom:   0.5em !default;
-$subtitle-collapse-margin: 0.25em !default;
-$paragraph-margin-bottom:  1em !default;
-$label-color:              map-get($colors, grey) !default;
-$label-font-size:          0.85em !default;
-$label-margin-bottom:      0.5em !default;
+$family: $family-sans-serif;
 
+$title-size: $size-2 !default;
+$title-weight: bold !default;
+$title-margin-top: 1.5rem !default;
+$title-margin-bottom: 1.5rem !default;
+
+$subtitle-size: $size-4 !default;
+$subtitle-weight: bold !default;
+$subtitle-margin-top: 1.5rem !default;
+$subtitle-margin-bottom: 1rem !default;
+
+$paragraph-margin-top: 1rem !default;
+$paragraph-margin-bottom: 1rem !default;
+
+$label-color: map-get($colors, "grey") !default;
+$label-font-size: 0.75em !default;
+$label-margin-top: 1rem !default;
+$label-margin-bottom: 1rem !default;
 
 body {
-	font-family: $family;
-	line-height: 1.15;
+  font-family: $family;
+  line-height: 1.15;
 }
 
 .title {
-	font-size: 3em;
-	&:not(:last-child) {
-		margin-bottom: $title-margin-bottom;
-	}
+  font-size: $title-size;
+  font-weight: $title-weight;
+
+	@include mt($title-margin-top);
+	@include mb($title-margin-bottom);
 }
 
 .subtitle {
-	font-size: 2em;
-	&:not(:last-child) {
-		margin-bottom: $subtitle-margin-bottom;
-	}
+  font-size: $subtitle-size;
+  font-weight: $subtitle-weight;
 
-	.title + & {
-		margin-top: -$subtitle-collapse-margin;
-	}
+	@include mt($subtitle-margin-top);
+	@include mb($subtitle-margin-bottom);
 }
 
 .paragraph {
-	&:not(:last-child) {
-		margin-bottom: $paragraph-margin-bottom;
-	}
+	@include mt($paragraph-margin-top);
+	@include mb($paragraph-margin-bottom);
 }
 
 .label {
-	color: $label-color;
-	font-size: $label-font-size;
-	margin-bottom: $label-margin-bottom;
+  color: $label-color;
+  font-size: $label-font-size;
 
-	&.is-caps {
-		text-transform: uppercase;
-		letter-spacing: 0.23em;
-		transform: scale(1, 0.95);
-	}
+	@include mt($label-margin-top);
+	@include mb($label-margin-bottom);
+
+  &.is-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.23em;
+    transform: scale(1, 0.95);
+  }
 }
 
 a {
-	color: $link;
+  color: $link;
 }
 
 b {
-	font-weight: 700;
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
 }

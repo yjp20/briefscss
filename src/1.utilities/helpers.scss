@@ -1,0 +1,27 @@
+@mixin mt($margin) {
+  &:not(.is-flat):not(:first-child) {
+    margin-top: $margin;
+    @content;
+  }
+}
+
+@mixin mb($margin) {
+  &:not(.is-flat):not(:last-child) {
+    margin-bottom: $margin;
+    @content;
+  }
+}
+
+@mixin ml($margin) {
+  &.is-inline:not(:first-child) {
+    margin-left: $margin;
+    @content;
+  }
+}
+
+@mixin mr($margin) {
+  &.is-inline:not(:last-child) {
+    margin-right: $margin;
+    @content;
+  }
+}

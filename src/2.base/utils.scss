@@ -1,17 +1,123 @@
-.has-centered {
-	display: flex;
-	align-items: center;
+.fl {
+  display: flex;
 }
 
-.is-fullwidth {
-	width: 100%;
+.fl-col {
+  flex-direction: column;
+}
+
+.fl-rcol {
+  flex-direction: column-reverse;
+}
+
+.fl-row {
+  flex-direction: row;
+}
+
+.fl-rrow {
+  flex-direction: row-reverse;
+}
+
+.jc-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.jc-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jc-center {
+  display: flex;
+  justify-content: center;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.as-center {
+  align-self: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.border {
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $border;
+}
+
+.r {
+  border-radius: $radius;
+}
+
+.r-small {
+  border-radius: $radius-small;
+}
+
+.r-large {
+  border-radius: $radius-large;
+}
+
+.r-rounded {
+  border-radius: $radius-rounded;
+}
+
+.s-1 {
+  font-size: $size-1;
+}
+
+.s-2 {
+  font-size: $size-2;
+}
+
+.s-3 {
+  font-size: $size-3;
+}
+
+.s-4 {
+  font-size: $size-4;
+}
+
+.s-5 {
+  font-size: $size-5;
+}
+
+.s-6 {
+  font-size: $size-6;
+}
+
+.s-7 {
+  font-size: $size-7;
 }
 
 @each $key, $val in $colors {
-	.has-fg-#{$key} {
-		color: $val;
-	}
-	.has-bg-#{$key} {
-		background-color: $val;
-	}
+  .f-#{$key} {
+    --f: $val;
+    color: $val;
+  }
+  .b-#{$key} {
+    --b: $val;
+    background-color: $val;
+  }
 }

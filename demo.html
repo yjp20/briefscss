@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>briefscss demo</title>
+    <link rel="stylesheet" href="./css/briefs.css" />
+  </head>
+  <body>
+    <div class="section is-small">
+      <div class="container max-width-tablet">
+        <h1 class="title">briefscss</h1>
+        <div style="max-width: 25rem">
+          <p class="paragraph">
+            <b>not minimal:</b> Minimalism is not the goal of briefscss, clear
+            design hierarchy is.
+          </p>
+          <p class="paragraph">
+            <b>not batteries-included:</b> You're most likely going to have to
+            write your own css. briefscss is more meant to enforce a design
+            system than it is to be a component framework.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section is-small">
+      <div class="container max-width-tablet">
+        <h2 class="title">Concepts</h2>
+        <h3 class="subtitle">Spacing</h3>
+        <p class="paragraph">
+          In briefscss, spacing is a multiple of 4px, generally either 16px or
+          24px.
+        </p>
+        <p class="paragraph">
+          All "elements" are designed with a built-in top and bottom margin.
+          These margins differ based on the element. Certain elements will have
+          larger margins because they deserve more space. Margins also differ
+          based on their position: first child elements do not get margin-tops,
+          while last child elements do not get margin-bottoms.
+        </p>
+        <p class="paragraph">
+          Elements with class .is-inline do not establish vertical margins and instead
+          establish horizontal margins.
+        </p>
+        <h3 class="subtitle">Colors</h3>
+        <div class="columns">
+          <div class="column is-12 is-6-desktop">
+            <div class="card is-selectable">
+              <div class="card-header">Accents</div>
+              <div class="card-item">
+                <div class="swatch b-lightred"></div>
+                <div class="swatch b-red"></div>
+                <span>Red</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-lightorange"></div>
+                <div class="swatch b-orange"></div>
+                <span>Orange</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-lightyellow"></div>
+                <div class="swatch b-yellow"></div>
+                <span>Yellow</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-lightgreen"></div>
+                <div class="swatch b-green"></div>
+                <span>Green</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-lightturquoise"></div>
+                <div class="swatch b-turquoise"></div>
+                <span>Turquoise</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-lightcyan"></div>
+                <div class="swatch b-cyan"></div>
+                <span>Cyan</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-lightblue"></div>
+                <div class="swatch b-blue"></div>
+                <span>Blue</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-lightpurple"></div>
+                <div class="swatch b-purple"></div>
+                <span>Purple</span>
+              </div>
+            </div>
+          </div>
+          <div class="column is-12 is-6-desktop">
+            <div class="card is-selectable">
+              <div class="card-header">Greyscale</div>
+              <div class="card-item">
+                <div class="swatch b-black"></div>
+                <span>Black</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-dark"></div>
+                <span>Dark</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-grey"></div>
+                <span>Grey</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-light"></div>
+                <span>Light</span>
+              </div>
+              <div class="card-item">
+                <div class="swatch b-white"></div>
+                <span>White</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="subtitle">Radius</h3>
+        <div class="box">
+          <div
+            class="fl fl-col t-center jc-center border b-light r-small"
+            style="margin-right: 0.75rem; width: 5rem; height: 5rem"
+          >
+            <div class="paragraph is-flat">Small</div>
+            <div class="label is-flat">2px</div>
+          </div>
+          <div
+            class="fl fl-col t-center jc-center border b-light r"
+            style="margin-right: 0.75rem; width: 5rem; height: 5rem"
+          >
+            <div class="paragraph is-flat">Default</div>
+            <div class="label is-flat">4px</div>
+          </div>
+          <div
+            class="fl fl-col t-center jc-center border b-light r-large"
+            style="margin-right: 0.75rem; width: 5rem; height: 5rem"
+          >
+            <div class="paragraph is-flat">Large</div>
+            <div class="label is-flat">10px</div>
+          </div>
+          <div
+            class="fl fl-col t-center jc-center border b-light r-rounded"
+            style="width: 5rem; height: 5rem"
+          >
+            <div class="paragraph is-flat">Round</div>
+            <div class="label is-flat">9999px</div>
+          </div>
+        </div>
+        <h2 class="subtitle">Typography</h2>
+        <div class="card">
+          <div class="card-header">Text sizes</div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              3rem
+            </div>
+            <div class="s-1">Size 1</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              2.5rem
+            </div>
+            <div class="s-2">Size 2</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              2rem
+            </div>
+            <div class="s-3">Size 3</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              1.5rem
+            </div>
+            <div class="s-4">Size 4</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              1.25rem
+            </div>
+            <div class="s-5">Size 5</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              1rem
+            </div>
+            <div class="s-6">Size 6</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              0.75rem
+            </div>
+            <div class="s-7">Size 7</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Semantic styles</div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              3rem<br />bold
+            </div>
+            <div class="title is-flat">Title</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              3rem<br />bold
+            </div>
+            <div class="subtitle is-flat">Subtitle</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              3rem
+            </div>
+            <div class="paragraph is-flat">paragraph</div>
+          </div>
+          <div class="card-item">
+            <div
+              class="label is-flat"
+              style="width: 3rem; margin-right: 0.5rem"
+            >
+              0.75rem<br />grey
+            </div>
+            <div class="label is-flat">label</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section is-small">
+      <div class="container max-width-tablet">
+        <h2 class="title">Layout</h2>
+        <h2 class="subtitle">Columns</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="border r b-light">column</div>
+          </div>
+          <div class="column">
+            <div class="border r b-light">column</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section is-small">
+      <div class="container max-width-tablet">
+        <h2 class="title">Elements</h2>
+        <h2 class="subtitle">Button</h2>
+        <div>
+          <button class="button">Button</button>
+          <button class="button b-black f-white">Button</button>
+          <button class="button b-red f-white">Button</button>
+          <button class="button b-orange f-white">Button</button>
+          <button class="button b-yellow f-white">Button</button>
+          <button class="button b-green f-white">Button</button>
+          <button class="button b-turquoise f-white">Button</button>
+          <button class="button b-cyan f-white">Button</button>
+          <button class="button b-blue f-white">Button</button>
+          <button class="button b-purple f-white">Button</button>
+          <button class="button is-link">Button</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

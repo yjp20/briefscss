@@ -1,35 +1,51 @@
-$card-color:              inherit !default;
-$card-background-color:   white !default;
-$card-border:             $border !default;
-$card-border-width:       $border-width !default;
-$card-border-radius:      $radius !default;
-$card-border-inner:       $card-border !default;
+$card-background-color: map-get($colors, "white") !default;
+$card-padding: 0.75rem;
+$card-border: $border !default;
+$card-border-width: $border-width !default;
+$card-border-radius: $radius !default;
+$card-border-inner: $card-border !default;
 $card-border-inner-width: $border-width !default;
 
+$card-margin-top: 1rem !default;
+$card-margin-bottom: 1rem !default;
+
 .card {
-	color:            $card-color;
-	background-color: $card-background-color;
-	border-color:     $card-border;
-	border-width:     $card-border-width;
-	border-style:     solid;
-	border-radius:    $card-border-radius;
+  background-color: $card-background-color;
+  border-color: $card-border;
+  border-width: $card-border-width;
+  border-style: solid;
+  border-radius: $card-border-radius;
 
-	.card-header {
-		box-shadow: 0 -1px 0 0 #00000021;
-		padding: 1em;
-	}
+	@include mt($card-margin-top);
+	@include mb($card-margin-bottom);
 
-	.card-body {
-		padding: 1em;
-	}
+  > *:not(:first-child) {
+    border-top-color: $card-border-inner;
+    border-top-width: $card-border-inner-width;
+    border-top-style: solid;
+  }
+}
 
-	> *:not(:first-child) {
-		border-top-color: $card-border-inner;
-		border-top-width: $card-border-inner-width;
-		border-top-style: solid;
-	}
+.card-header {
+  font-weight: bold;
+  padding: $card-padding;
+}
 
-	&:not(:last-child) {
-		margin-bottom: 1em;
-	}
+.card-item {
+  display: flex;
+  padding: $card-padding;
+
+  .is-selectable > & {
+    .card-item:hover {
+      background-color: map-get($colors, "light");
+    }
+  }
+
+  &:not(.is-vertical) {
+    align-items: center;
+  }
+
+  &.is-vertical {
+    flex-direction: column;
+  }
 }
