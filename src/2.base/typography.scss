@@ -13,10 +13,10 @@ $subtitle-margin-bottom: 1rem !default;
 $paragraph-margin-top: 1rem !default;
 $paragraph-margin-bottom: 1rem !default;
 
-$label-color: map-get($colors, "grey") !default;
+$label-color: map-get($colors, "dark") !default;
 $label-font-size: 0.75em !default;
-$label-margin-top: 1rem !default;
-$label-margin-bottom: 1rem !default;
+$label-margin-top: 0.5rem !default;
+$label-margin-bottom: 0.5rem !default;
 
 body {
   font-family: $family;
@@ -68,4 +68,8 @@ b {
 
 em {
   font-style: italic;
+}
+
+label {
+	display: block;
 }

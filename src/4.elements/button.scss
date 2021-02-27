@@ -5,15 +5,6 @@ $button-color: $text !default;
 $button-padding-vertical: 0.5em !default;
 $button-padding-horizontal: 1em !default;
 
-$button-hover-color: $link-hover;
-$button-hover-border-color: $link-hover-border;
-
-$button-active-color: $link-active;
-$button-active-border-color: $link-active-border;
-
-$button-focus-color: $link-focus;
-$button-focus-border-color: $link-focus-border;
-
 .button {
   box-sizing: border-box;
   position: relative;
@@ -24,6 +15,7 @@ $button-focus-border-color: $link-focus-border;
   text-align: center;
   white-space: nowrap;
   padding: $button-padding-vertical $button-padding-horizontal;
+  background-color: rgba(var(--b), 1);
 
   &:not(.is-link)::before {
     position: absolute;
@@ -32,8 +24,9 @@ $button-focus-border-color: $link-focus-border;
     right: 0;
     bottom: 0;
     left: 0;
-    box-shadow: inset 0px 0px 2px 1px var(--f);
-    mix-blend-mode: luminosity;
+    box-shadow: inset 0px 0px 3px rgba(var(--f), 0.4);
+    border-radius: $radius;
+		z-index: 1;
   }
 
   &:not(.is-link)::after {
@@ -47,22 +40,13 @@ $button-focus-border-color: $link-focus-border;
     border-width: $button-border-width;
     border-style: solid;
     border-radius: $radius;
-    mix-blend-mode: multiply;
+		mix-blend-mode: multiply;
   }
 
-  &.is-hover,
-  &:hover {
-    border-color: $button-hover-border-color;
-  }
-
-  &.is-active,
-  &:active {
-    border-color: $button-active-border-color;
-  }
-
-  &.is-focus,
-  &:focus {
-    border-color: $button-focus-border-color;
+  &.is-hover:not(.is-link),
+  &:hover:not(.is-link) {
+    background: linear-gradient(rgba(var(--f), 0.1), rgba(var(--f), 0.1)),
+      linear-gradient(rgba(var(--b), 1), rgba(var(--b), 1));
   }
 
   &.is-link {

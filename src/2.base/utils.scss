@@ -113,11 +113,11 @@
 
 @each $key, $val in $colors {
   .f-#{$key} {
-    --f: $val;
+    --f: #{toChannels($val)};
     color: $val;
   }
   .b-#{$key} {
-    --b: $val;
+    --b: #{toChannels($val)};
     background-color: $val;
   }
 }

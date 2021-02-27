@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $gap: 16px !default;
 
 // Breakpoints are defined by their min-size
@@ -71,3 +73,14 @@ $radius-small:   2px !default;
 $radius:         4px !default;
 $radius-large:   10px !default;
 $radius-rounded: 9999px;
+
+$shadow:         0 2px 2px rgba(0,0,0,.075);
+
+@function toChannels($color) {
+	@return red($color), green($color), blue($color);
+}
+
+:root {
+	--f: #{toChannels(map-get($colors, "black"))};
+	--b: #{toChannels(map-get($colors, "white"))};
+}
