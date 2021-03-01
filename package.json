@@ -15,7 +15,7 @@
 	],
 	"scripts": {
 		"start": "npm run build:sass -- --watch",
-		"prepublish": "npm run build",
+		"prepare": "npm run build",
 		"dev": "nodemon --watch src -e scss --exec npm run build:sass",
 		"build": "npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
 		"build:sass": "node-sass --output-style expanded --source-map true briefs.scss css/briefs.css",

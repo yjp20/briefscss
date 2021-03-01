@@ -6,7 +6,7 @@ $button-padding-vertical: 0.5em !default;
 $button-padding-horizontal: 1em !default;
 
 .button {
-  --bo: $button-border-color;
+  --bo: #{toChannels($button-border-color)};
   box-sizing: border-box;
   position: relative;
   border: 0;
@@ -37,7 +37,7 @@ $button-padding-horizontal: 1em !default;
     right: 0;
     bottom: 0;
     left: 0;
-    border-color: var(--bo);
+    border-color: rgba(var(--bo), 1);
     border-width: $button-border-width;
     border-style: solid;
     border-radius: $radius;
