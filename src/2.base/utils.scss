@@ -120,4 +120,8 @@
     --b: #{toChannels($val)};
     background-color: $val;
   }
+  .bo-#{key} {
+    --bo: #{toChannels($val)};
+    border-color: $val;
+  }
 }

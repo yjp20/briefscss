@@ -19,24 +19,25 @@ $colors: (
 	"white":          hsl(231, 9%, 100%),
 
 	"red":            hsl(348, 91%, 50%),
-	"orange":         hsl(14, 91%, 50%),
-	"yellow":         hsl(44, 91%, 50%),
+	"orange":         hsl(14,  91%, 50%),
+	"yellow":         hsl(44,  91%, 50%),
 	"green":          hsl(141, 91%, 45%),
 	"turquoise":      hsl(171, 91%, 45%),
 	"cyan":           hsl(204, 91%, 50%),
 	"blue":           hsl(217, 91%, 50%),
 	"purple":         hsl(271, 91%, 50%),
-	"lightred":       hsl(348, 86%, 81%),
-	"lightorange":    hsl(14, 100%, 73%),
-	"lightyellow":    hsl(48, 100%, 87%),
-	"lightgreen":     hsl(141, 53%, 73%),
-	"lightturquoise": hsl(171, 100%, 81%),
-	"lightcyan":      hsl(204, 71%, 73%),
-	"lightblue":      hsl(195, 53%, 73%),
-	"lightpurple":    hsl(271, 100%, 91%),
+	"lightred":       hsl(348, 91%, 90%),
+	"lightorange":    hsl(14,  91%, 90%),
+	"lightyellow":    hsl(48,  91%, 90%),
+	"lightgreen":     hsl(141, 91%, 85%),
+	"lightturquoise": hsl(171, 90%, 85%),
+	"lightcyan":      hsl(204, 91%, 90%),
+	"lightblue":      hsl(195, 91%, 90%),
+	"lightpurple":    hsl(271, 91%, 90%),
 )!default;
 
 $text:                map-get($colors, "black") !default;
+$background:          map-get($colors, "white") !default;
 $border:              map-get($colors, "grey") !default;
 $border-width:        1px !default;
 
@@ -81,6 +82,7 @@ $shadow:         0 2px 2px rgba(0,0,0,.075);
 }
 
 :root {
-	--f: #{toChannels(map-get($colors, "black"))};
-	--b: #{toChannels(map-get($colors, "white"))};
+	--f: #{toChannels($text)};
+	--b: #{toChannels($background)};
+	--bo: #{toChannels($border)};
 }

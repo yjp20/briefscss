@@ -3,6 +3,8 @@ $section-medium-padding: 2em;
 $section-small-padding: 2em;
 
 .section {
+	background-color: rgba(var(--b), 1);
+
 	&.is-small {
 		padding: $section-small-padding 0;
 	}
