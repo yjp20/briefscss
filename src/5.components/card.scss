@@ -9,7 +9,7 @@ $card-margin-top: 1rem !default;
 $card-margin-bottom: 1rem !default;
 
 .card {
-	--bo: $card-border;
+  --bo: #{toChannels($card-border)};
   background-color: rgba(var(--b), 1);
   border-color: rgba(var(--bo), 1);
   border-width: $card-border-width;
