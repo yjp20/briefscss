@@ -10,6 +10,7 @@ $card-margin-top: 1rem !default;
 $card-margin-bottom: 1rem !default;
 
 .card {
+	--bo: #{toChannels($border)};
   background-color: rgba(var(--b), 1);
   border-color: rgba(var(--bo), 1);
   border-width: $card-border-width;
@@ -20,7 +21,7 @@ $card-margin-bottom: 1rem !default;
   @include mb($card-margin-bottom);
 
   > *:not(:first-child) {
-    border-top-color: $card-border-inner;
+    border-color: rgba(var(--bo), 1);
     border-top-width: $card-border-inner-width;
     border-top-style: solid;
   }
@@ -33,7 +34,7 @@ $card-margin-bottom: 1rem !default;
 
 .card-body {
   > *:not(:first-child) {
-    border-top-color: $card-border-inner;
+    border-color: rgba(var(--bo), 1);
     border-top-width: $card-border-inner-width;
     border-top-style: solid;
   }
@@ -44,10 +45,10 @@ $card-margin-bottom: 1rem !default;
   padding: $card-padding;
 
   .card.is-selectable > &:hover,
-	.card.is-selectable > .card-body > &:hover {
-		background-color: map-get($colors, "light");
-		mix-blend-mode: multiply;
-	}
+  .card.is-selectable > .card-body > &:hover {
+    background-color: map-get($colors, "light");
+    mix-blend-mode: multiply;
+  }
 
   &:not(.is-vertical) {
     align-items: center;
