@@ -113,15 +113,15 @@
 
 @each $key, $val in $colors {
   .f-#{$key} {
-    --f: #{toChannels($val)};
+    --f: #{toChannels($val)} !important;
     color: $val;
   }
   .b-#{$key} {
-    --b: #{toChannels($val)};
+    --b: #{toChannels($val)} !important;
     background-color: $val;
   }
   .bo-#{$key} {
-    --bo: #{toChannels($val)};
+    --bo: #{toChannels($val)} !important;
     border-color: $val;
   }
 }

@@ -26,14 +26,14 @@ $colors: (
 	"cyan":           hsl(204, 91%, 50%),
 	"blue":           hsl(217, 91%, 50%),
 	"purple":         hsl(271, 91%, 50%),
-	"lightred":       hsl(348, 91%, 90%),
-	"lightorange":    hsl(14,  91%, 90%),
-	"lightyellow":    hsl(48,  91%, 90%),
-	"lightgreen":     hsl(141, 91%, 85%),
-	"lightturquoise": hsl(171, 90%, 85%),
-	"lightcyan":      hsl(204, 91%, 90%),
-	"lightblue":      hsl(195, 91%, 90%),
-	"lightpurple":    hsl(271, 91%, 90%),
+	"lightred":       hsl(348, 95%, 95%),
+	"lightorange":    hsl(14,  95%, 95%),
+	"lightyellow":    hsl(48,  95%, 95%),
+	"lightgreen":     hsl(141, 95%, 90%),
+	"lightturquoise": hsl(171, 95%, 90%),
+	"lightcyan":      hsl(204, 95%, 95%),
+	"lightblue":      hsl(195, 95%, 95%),
+	"lightpurple":    hsl(271, 95%, 95%),
 )!default;
 
 $text:                map-get($colors, "black") !default;

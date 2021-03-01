@@ -1,16 +1,15 @@
 $card-background-color: map-get($colors, "white") !default;
-$card-padding: 0.75rem;
+$card-padding: 0.75rem !default;
 $card-border: $border !default;
 $card-border-width: $border-width !default;
 $card-border-radius: $radius !default;
-$card-border-inner: $card-border !default;
 $card-border-inner-width: $border-width !default;
 
 $card-margin-top: 1rem !default;
 $card-margin-bottom: 1rem !default;
 
 .card {
-	--bo: #{toChannels($border)};
+	--bo: $card-border;
   background-color: rgba(var(--b), 1);
   border-color: rgba(var(--bo), 1);
   border-width: $card-border-width;
