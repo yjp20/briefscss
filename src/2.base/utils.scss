@@ -110,18 +110,3 @@
 .s-7 {
   font-size: $size-7;
 }
-
-@each $key, $val in $colors {
-  .f-#{$key} {
-    --f: #{toChannels($val)} !important;
-    color: $val;
-  }
-  .b-#{$key} {
-    --b: #{toChannels($val)} !important;
-    background-color: $val;
-  }
-  .bo-#{$key} {
-    --bo: #{toChannels($val)} !important;
-    border-color: $val;
-  }
-}

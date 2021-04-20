@@ -1,17 +1,19 @@
-$card-background-color: map-get($colors, "white") !default;
+$card-background-color: $background !default;
 $card-padding: 0.75rem !default;
 $card-border: $border !default;
 $card-border-width: $border-width !default;
 $card-border-radius: $radius !default;
 $card-border-inner-width: $border-width !default;
 
+$card-hover-background-color: $hover-background !default;
+
 $card-margin-top: 1rem !default;
 $card-margin-bottom: 1rem !default;
 
 .card {
   --bo: #{toChannels($card-border)};
-  background-color: rgba(var(--b), 1);
-  border-color: rgba(var(--bo), 1);
+  background-color: $card-background-color;
+  border-color: $card-border;
   border-width: $card-border-width;
   border-style: solid;
   border-radius: $card-border-radius;
@@ -20,7 +22,7 @@ $card-margin-bottom: 1rem !default;
   @include mb($card-margin-bottom);
 
   > *:not(:first-child) {
-    border-color: rgba(var(--bo), 1);
+    border-color: $card-border;
     border-top-width: $card-border-inner-width;
     border-top-style: solid;
   }
@@ -33,7 +35,7 @@ $card-margin-bottom: 1rem !default;
 
 .card-body {
   > *:not(:first-child) {
-    border-color: rgba(var(--bo), 1);
+    border-color: $card-border;
     border-top-width: $card-border-inner-width;
     border-top-style: solid;
   }
@@ -45,8 +47,7 @@ $card-margin-bottom: 1rem !default;
 
   .card.is-selectable > &:hover,
   .card.is-selectable > .card-body > &:hover {
-    background-color: map-get($colors, "light");
-    mix-blend-mode: multiply;
+    background-color: $card-hover-background-color;
   }
 
   &:not(.is-vertical) {

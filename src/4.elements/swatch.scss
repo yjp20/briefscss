@@ -5,22 +5,17 @@
 	width: 1em;
 	border-radius: $radius;
 	align-self: center;
-
-	&:after {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		mix-blend-mode: multiply;
-		content: "";
-		border-style: solid;
-		border-color: $border;
-		border-width: $border-width;
-		border-radius: $radius;
-	}
+	border: 1px solid $border;
 
 	&:not(:last-child) {
 		margin-right: 0.5em;
+	}
+
+  @each $name, $color in $colors {
+		&.is-#{$name} {
+			background-color: $color;
+			border-color: scale-color($color, $lightness: -20%, $saturation: -50%);
+			color: choose-contrast-color($color);
+		}
 	}
 }

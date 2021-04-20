@@ -7,7 +7,7 @@ $title-margin-bottom: 1.5rem !default;
 
 $subtitle-size: $size-4 !default;
 $subtitle-weight: bold !default;
-$subtitle-margin-top: 1.5rem !default;
+$subtitle-margin-top: 2rem !default;
 $subtitle-margin-bottom: 1rem !default;
 
 $paragraph-margin-top: 1rem !default;
@@ -58,8 +58,17 @@ body {
   }
 }
 
-a {
+a:not(.no-link) {
   color: $link;
+
+	&:hover {
+		color: $link-hover;
+	}
+}
+
+a.no-link {
+	color: unset;
+	text-decoration: unset;
 }
 
 b {

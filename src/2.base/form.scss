@@ -1,5 +1,6 @@
 $field-margin-top: 0.75rem !default;
 $field-margin-bottom: 0.75rem !default;
+$input-background: $background !default;
 $input-border: $border !default;
 $input-border-width: $border-width !default;
 $input-shadow: $shadow !default;
@@ -16,8 +17,8 @@ $textarea-min-height: 8em !default;
 %input-textarea {
   box-sizing: border-box;
   box-shadow: $input-shadow;
-  background-color: rgba(var(--b), 1);
-  border-color: rgba(var(--bo), 1);
+  background-color: $input-background;
+  border-color: $input-border;
   border-width: $input-border-width;
   border-style: solid;
   padding: $input-padding-vertical $input-padding-horizontal;
@@ -28,6 +29,10 @@ $textarea-min-height: 8em !default;
   &[readonly] {
     box-shadow: none;
   }
+
+	&[disabled] {
+		background-color: map-get($colors, "greylight");
+	}
 }
 
 input {

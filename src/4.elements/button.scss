@@ -1,15 +1,17 @@
 $button-background-color: white !default;
-$button-border-color: $border !default;
+$button-border: $border !default;
 $button-border-width: $border-width !default;
 $button-color: $text !default;
 $button-padding-vertical: 0.5em !default;
 $button-padding-horizontal: 1em !default;
 
-.button {
-  --bo: #{toChannels($button-border-color)};
+$button-hover-background-color: $hover-background !default;
+
+.button:not(.is-link) {
   box-sizing: border-box;
-  position: relative;
-  border: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: $button-border;
   border-radius: $radius;
   cursor: pointer;
   justify-content: center;
@@ -18,43 +20,19 @@ $button-padding-horizontal: 1em !default;
   padding: $button-padding-vertical $button-padding-horizontal;
   background-color: rgba(var(--b), 1);
 
-  &:not(.is-link)::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    box-shadow: inset 0px 0px 3px rgba(var(--f), 0.4);
-    border-radius: $radius;
-    z-index: 1;
-  }
+	&:hover {
+		background: $button-hover-background-color;
+	}
 
-  &:not(.is-link)::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-color: rgba(var(--bo), 1);
-    border-width: $button-border-width;
-    border-style: solid;
-    border-radius: $radius;
-    mix-blend-mode: multiply;
-  }
+  @each $name, $color in $colors {
+		&.is-#{$name} {
+			background-color: $color;
+			border-color: scale-color($color, $lightness: -20%);
+			color: choose-contrast-color($color);
 
-  &.is-hover:not(.is-link),
-  &:hover:not(.is-link) {
-    background: linear-gradient(rgba(var(--f), 0.1), rgba(var(--f), 0.1)),
-      linear-gradient(rgba(var(--b), 1), rgba(var(--b), 1));
-  }
-
-  &.is-link {
-    background-color: transparent;
-    border-color: transparent;
-    color: $button-color;
-    padding: 0;
-    text-decoration: underline;
-  }
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
 }

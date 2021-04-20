@@ -1,7 +1,7 @@
 .container {
 	box-sizing: border-box;
 	margin: 0 auto;
-	padding: 0 $gap;
+	padding: 0 $breakpoint-gap;
 	width: 100%;
 
 	@each $name, $bp in $breakpoints {

@@ -1,18 +1,19 @@
 $box-padding: 0.75rem !default;
+$box-background: $background !default;
 $box-border: $border !default;
 $box-border-width: $border-width !default;
 $box-border-radius: $radius !default;
 
 .box {
 	display: flex;
-	background-color: rgba(var(--b), 1);
-	border-color: rgba(var(--bo), 1);
+	background-color: $box-background;
+	border-color: $box-border;
 	border-width: $box-border-width;
 	border-style: solid;
 	border-radius: $box-border-radius;
 	padding: $box-padding;
 
 	&.is-vertical {
-		flex-direction: column;
+		display: block;
 	}
 }
