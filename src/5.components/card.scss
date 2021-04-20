@@ -55,6 +55,6 @@ $card-margin-bottom: 1rem !default;
   }
 
   &.is-vertical {
-    flex-direction: column;
+		display: block;
   }
 }
