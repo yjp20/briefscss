@@ -11,50 +11,54 @@ $card-margin-top: 1rem !default;
 $card-margin-bottom: 1rem !default;
 
 .card {
-  --bo: #{toChannels($card-border)};
-  background-color: $card-background-color;
-  border-color: $card-border;
-  border-width: $card-border-width;
-  border-style: solid;
-  border-radius: $card-border-radius;
+	--bo: #{toChannels($card-border)};
+	background-color: $card-background-color;
+	border-color: $card-border;
+	border-width: $card-border-width;
+	border-style: solid;
+	border-radius: $card-border-radius;
 
-  @include mt($card-margin-top);
-  @include mb($card-margin-bottom);
+	@include mt($card-margin-top);
+	@include mb($card-margin-bottom);
 
-  > *:not(:first-child) {
-    border-color: $card-border;
-    border-top-width: $card-border-inner-width;
-    border-top-style: solid;
-  }
+	> *:not(:first-child) {
+		border-color: $card-border;
+		border-top-width: $card-border-inner-width;
+		border-top-style: solid;
+	}
 }
 
 .card-header {
-  font-weight: bold;
-  padding: $card-padding;
+	font-weight: bold;
+	padding: $card-padding;
 }
 
 .card-body {
-  > *:not(:first-child) {
-    border-color: $card-border;
-    border-top-width: $card-border-inner-width;
-    border-top-style: solid;
-  }
+	> *:not(:first-child) {
+		border-color: $card-border;
+		border-top-width: $card-border-inner-width;
+		border-top-style: solid;
+	}
 }
 
 .card-item {
-  display: flex;
-  padding: $card-padding;
+	display: flex;
+	padding: $card-padding;
+	background-color: $card-background-color;
+	border: 0;
+	width: 100%;
+	box-sizing: border-box;
 
-  .card.is-selectable > &:hover,
-  .card.is-selectable > .card-body > &:hover {
-    background-color: $card-hover-background-color;
-  }
+	.card.is-selectable > &:hover,
+	.card.is-selectable > .card-body > &:hover {
+		background-color: $card-hover-background-color;
+	}
 
-  &:not(.is-vertical) {
-    align-items: center;
-  }
+	&:not(.is-vertical) {
+		align-items: center;
+	}
 
-  &.is-vertical {
+	&.is-vertical {
 		display: block;
-  }
+	}
 }

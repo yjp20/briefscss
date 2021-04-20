@@ -10,25 +10,26 @@ $textarea-max-height: 40em !default;
 $textarea-min-height: 8em !default;
 
 .field {
-  @include mt($field-margin-top);
-  @include mb($field-margin-bottom);
+	@include mt($field-margin-top);
+	@include mb($field-margin-bottom);
 }
 
 %input-textarea {
-  box-sizing: border-box;
-  box-shadow: $input-shadow;
-  background-color: $input-background;
-  border-color: $input-border;
-  border-width: $input-border-width;
-  border-style: solid;
-  padding: $input-padding-vertical $input-padding-horizontal;
-  max-width: 100%;
-  width: 100%;
-  border-radius: $radius;
+	box-sizing: border-box;
+	box-shadow: $input-shadow;
+	background-color: $input-background;
+	border-color: $input-border;
+	border-width: $input-border-width;
+	border-style: solid;
+	padding: $input-padding-vertical $input-padding-horizontal;
+	max-width: 100%;
+	width: 100%;
+	border-radius: $radius;
+	font-size: 1em;
 
-  &[readonly] {
-    box-shadow: none;
-  }
+	&[readonly] {
+		box-shadow: none;
+	}
 
 	&[disabled] {
 		background-color: map-get($colors, "greylight");
@@ -36,15 +37,15 @@ $textarea-min-height: 8em !default;
 }
 
 input {
-  @extend %input-textarea;
+	@extend %input-textarea;
 }
 
 textarea {
-  @extend %input-textarea;
-  display: block;
-  resize: vertical;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: $textarea-min-height;
-  max-height: $textarea-max-height;
+	@extend %input-textarea;
+	display: block;
+	resize: vertical;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: $textarea-min-height;
+	max-height: $textarea-max-height;
 }
