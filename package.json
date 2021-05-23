@@ -18,7 +18,7 @@
 		"prepare": "npm run build",
 		"dev": "nodemon --watch src -e scss --exec npm run build:sass",
 		"build": "npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
-		"build:sass": "node-sass --output-style expanded --source-map true briefs.scss css/briefs.css",
+		"build:sass": "sass briefs.scss css/briefs.css",
 		"build:autoprefix": "postcss --use autoprefixer --map false --output css/briefs.css css/briefs.css",
 		"build:cleancss": "cleancss -o css/briefs.min.css css/briefs.css"
 	},
@@ -31,8 +31,8 @@
 	"devDependencies": {
 		"autoprefixer": "^9.8.5",
 		"clean-css-cli": "^4.3.0",
-		"node-sass": "^4.14.1",
 		"nodemon": "^2.0.7",
-		"postcss-cli": "^7.1.1"
+		"postcss-cli": "^7.1.1",
+		"sass": "^1.34.0"
 	}
 }
