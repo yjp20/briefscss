@@ -82,6 +82,6 @@ $hover-background: map-get($colors, "light");
 
 :root {
 	@each $name, $value in $colors {
-		--#{name}: #{value};
+		--#{$name}: #{$value};
 	}
 }
