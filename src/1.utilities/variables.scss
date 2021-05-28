@@ -79,3 +79,9 @@ $radius-rounded: 9999px;
 
 $shadow:         0 2px 2px rgba(0,0,0,.075);
 $hover-background: map-get($colors, "light");
+
+:root {
+	@each $name, $value in $colors {
+		--#{name}: #{value};
+	}
+}
