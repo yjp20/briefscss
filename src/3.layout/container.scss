@@ -1,3 +1,5 @@
+$container-override: unset !default;
+
 .container {
 	box-sizing: border-box;
 	margin: 0 auto;
@@ -5,8 +7,15 @@
 	width: 100%;
 
 	@each $name, $bp in $breakpoints {
-		@include gt($bp) {
-			width: $bp;
+		@if $container_override == unset {
+			@include gt($bp) {
+				width: $bp;
+			}
+		}
+		@else {
+			@include gt($bp) {
+				width: map-get($container-override, $name);
+			}
 		}
 	}
 
