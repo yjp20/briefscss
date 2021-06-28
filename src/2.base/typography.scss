@@ -72,7 +72,7 @@ a:not(.no-link) {
 	text-decoration: none;
 	margin: -1px -1px;
 	padding: 1px 1px;
-	border-radius: 2px;
+	border-radius: $radius;
 
 	&:hover {
 		background-color: $link-background;
