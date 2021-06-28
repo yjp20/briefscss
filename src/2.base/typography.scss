@@ -23,6 +23,7 @@ body {
 	line-height: 1.15;
 }
 
+.content h1,
 .title {
 	font-size: $title-size;
 	font-weight: $title-weight;
@@ -31,6 +32,7 @@ body {
 	@include mb($title-margin-bottom);
 }
 
+.content h2,
 .subtitle {
 	font-size: $subtitle-size;
 	font-weight: $subtitle-weight;
@@ -39,7 +41,14 @@ body {
 	@include mb($subtitle-margin-bottom);
 }
 
+.content p,
 .paragraph {
+	@include mt($paragraph-margin-top);
+	@include mb($paragraph-margin-bottom);
+}
+
+.content h3 {
+	font-weight: $subtitle-weight;
 	@include mt($paragraph-margin-top);
 	@include mb($paragraph-margin-bottom);
 }
