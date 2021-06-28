@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $button-background-color: white !default;
 $button-border: $border !default;
 $button-border-width: $border-width !default;
@@ -24,14 +26,14 @@ $button-hover-background-color: $hover-background !default;
 		background: $button-hover-background-color;
 	}
 
-  @each $name, $color in $colors {
+  @each $name, $color in map.merge($greyscale, $colors) {
 		&.is-#{$name} {
 			background-color: $color;
-			border-color: scale-color($color, $lightness: -20%);
+			border-color: get-dark($color);
 			color: choose-contrast-color($color);
 
 			&:hover {
-				opacity: 0.8;
+				background-color: get-dark($color);
 			}
 		}
 	}

@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "sass:math";
+
 @mixin mt($margin) {
   &:not(.is-flat):not(:first-child) {
     margin-top: $margin;
@@ -297,11 +300,11 @@ $linear-channel-values:
   $backLum: luminance($back) + .05;
   $foreLum: luminance($front) + .05;
 
-  @return max($backLum, $foreLum) / min($backLum, $foreLum);
+  @return math.div(max($backLum, $foreLum), min($backLum, $foreLum));
 }
 
 @function choose-contrast-color($color) {
-  $lightContrast: contrast($color, white);
+  $lightContrast: contrast($color, white) * 1.5;
   $darkContrast: contrast($color, black);
 
   @if ($lightContrast > $darkContrast) {
@@ -310,4 +313,12 @@ $linear-channel-values:
   @else {
     @return black;
   }
+}
+
+@function get-light($color) {
+	@return color.scale($color, $lightness: +75%);
+}
+
+@function get-dark($color) {
+	@return color.scale($color, $lightness: -20%);
 }

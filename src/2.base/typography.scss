@@ -13,27 +13,27 @@ $subtitle-margin-bottom: 1rem !default;
 $paragraph-margin-top: 1rem !default;
 $paragraph-margin-bottom: 1rem !default;
 
-$label-color: map-get($colors, "dark") !default;
+$label-color: map-get($greyscale, "dark") !default;
 $label-font-size: 0.75em !default;
 $label-margin-top: 0.5rem !default;
 $label-margin-bottom: 0.5rem !default;
 
 body {
-  font-family: $family;
-  line-height: 1.15;
+	font-family: $family;
+	line-height: 1.15;
 }
 
 .title {
-  font-size: $title-size;
-  font-weight: $title-weight;
+	font-size: $title-size;
+	font-weight: $title-weight;
 
 	@include mt($title-margin-top);
 	@include mb($title-margin-bottom);
 }
 
 .subtitle {
-  font-size: $subtitle-size;
-  font-weight: $subtitle-weight;
+	font-size: $subtitle-size;
+	font-weight: $subtitle-weight;
 
 	@include mt($subtitle-margin-top);
 	@include mb($subtitle-margin-bottom);
@@ -45,24 +45,28 @@ body {
 }
 
 .label {
-  color: $label-color;
-  font-size: $label-font-size;
+	color: $label-color;
+	font-size: $label-font-size;
 
 	@include mt($label-margin-top);
 	@include mb($label-margin-bottom);
 
-  &.is-caps {
-    text-transform: uppercase;
-    letter-spacing: 0.23em;
-    transform: scale(1, 0.95);
-  }
+	&.is-caps {
+		text-transform: uppercase;
+		letter-spacing: 0.23em;
+		transform: scale(1, 0.95);
+	}
 }
 
 a:not(.no-link) {
-  color: $link;
+	color: $link;
+	text-decoration: none;
+	margin: -1px 0;
+	padding: 1px 2px;
+	border-radius: 2px;
 
 	&:hover {
-		color: $link-hover;
+		background-color: $link-background;
 	}
 }
 
@@ -72,7 +76,7 @@ a.no-link {
 }
 
 b {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 button {
@@ -80,7 +84,7 @@ button {
 }
 
 em {
-  font-style: italic;
+	font-style: italic;
 }
 
 label {

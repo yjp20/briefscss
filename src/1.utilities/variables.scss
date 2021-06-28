@@ -11,7 +11,7 @@ $breakpoints:   (
 	"fullhd":     1344px+(2*$breakpoint-gap),
 )!default;
 
-$colors: (
+$greyscale: (
 	"black":          hsl(231, 9%, 4%),
 	"dark":           hsl(231, 9%, 30%),
 	"greydark":       hsl(231, 9%, 52%),
@@ -19,42 +19,28 @@ $colors: (
 	"greylight":      hsl(231, 9%, 92%),
 	"light":          hsl(231, 9%, 98%),
 	"white":          hsl(231, 9%, 100%),
-
-	"red":            hsl(348, 91%, 45%),
-	"orange":         hsl(24,  92%, 46%),
-	"yellow":         hsl(44,  93%, 48%),
-	"green":          hsl(141, 91%, 40%),
-	"turquoise":      hsl(171, 91%, 40%),
-	"cyan":           hsl(204, 91%, 45%),
-	"blue":           hsl(217, 91%, 43%),
-	"purple":         hsl(271, 91%, 43%),
-	"lightred":       hsl(348, 95%, 95%),
-	"lightorange":    hsl(24,  95%, 95%),
-	"lightyellow":    hsl(48,  95%, 95%),
-	"lightgreen":     hsl(141, 95%, 90%),
-	"lightturquoise": hsl(171, 95%, 90%),
-	"lightcyan":      hsl(204, 95%, 95%),
-	"lightblue":      hsl(195, 95%, 95%),
-	"lightpurple":    hsl(271, 95%, 95%),
 )!default;
 
-$text:                map-get($colors, "black") !default;
-$background:          map-get($colors, "white") !default;
-$border:              map-get($colors, "grey") !default;
+$colors: (
+	"red":            hsl(348, 69%, 50%),
+	"orange":         hsl(24,  69%, 58%),
+	"yellow":         hsl(44,  72%, 60%),
+	"green":          hsl(141, 68%, 48%),
+	"turquoise":      hsl(171, 68%, 50%),
+	"blue":           hsl(207, 68%, 50%),
+	"purple":         hsl(271, 68%, 48%),
+)!default;
+
+$text:                map-get($greyscale, "black") !default;
+$background:          map-get($greyscale, "white") !default;
+$border:              map-get($greyscale, "grey") !default;
 $border-width:        1px !default;
 
 $accent:              map-get($colors, "blue") !default;
-$link:                map-get($colors, "blue") !default;
-$link-hover:          map-get($colors, "dark") !default;
-$link-hover-border:   map-get($colors, "grey") !default;
-$link-focus:          map-get($colors, "dark") !default;
-$link-focus-border:   map-get($colors, "grey") !default;
-$link-visited:        map-get($colors, "dark") !default;
-$link-visited-border: map-get($colors, "grey") !default;
-$link-active:         map-get($colors, "dark") !default;
-$link-active-border:  map-get($colors, "grey") !default;
+$link:                get-dark(map-get($colors, "blue")) !default;
+$link-background:     get-light(map-get($colors, "blue")) !default;
 
-$family-sans-serif: "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+$family-sans-serif: "IBM Plex Sans", "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
   "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   "Helvetica", "Arial", sans-serif !default;
 $family-serif:     serif !default;
@@ -78,10 +64,15 @@ $radius-large:   10px !default;
 $radius-rounded: 9999px;
 
 $shadow:         0 2px 2px rgba(0,0,0,.075);
-$hover-background: map-get($colors, "light");
+$hover-background: map-get($greyscale, "light");
 
 :root {
+	@each $name, $value in $greyscale {
+		--#{$name}: #{$value};
+	}
 	@each $name, $value in $colors {
 		--#{$name}: #{$value};
+		--#{$name}-dark: #{get-dark($value)};
+		--#{$name}-light: #{get-light($value)};
 	}
 }

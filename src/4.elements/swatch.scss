@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .swatch {
 	position: relative;
 	display: inline-flex;
@@ -11,7 +13,7 @@
 		margin-right: 0.5em;
 	}
 
-  @each $name, $color in $colors {
+  @each $name, $color in map.merge($greyscale, $colors) {
 		&.is-#{$name} {
 			background-color: $color;
 			border-color: scale-color($color, $lightness: -20%, $saturation: -50%);

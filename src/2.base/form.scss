@@ -4,8 +4,8 @@ $input-background: $background !default;
 $input-border: $border !default;
 $input-border-width: $border-width !default;
 $input-shadow: $shadow !default;
-$input-padding-vertical: 0.5em !default;
-$input-padding-horizontal: 0.5em !default;
+$input-padding-vertical: 0.25em !default;
+$input-padding-horizontal: 0.25em !default;
 $textarea-max-height: 40em !default;
 $textarea-min-height: 8em !default;
 
@@ -31,15 +31,15 @@ $textarea-min-height: 8em !default;
 		box-shadow: none;
 	}
 
-	&[disabled] {
-		background-color: map-get($colors, "greylight");
+	&:disabled {
+		background-color: map-get($greyscale, "greylight");
 	}
 }
 
+input:not([type]),
 input[type="text"],
 input[type="password"],
-input[type="date"],
-{
+input[type="date"] {
 	@extend %input-textarea;
 }
 

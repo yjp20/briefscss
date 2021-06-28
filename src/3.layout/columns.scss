@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $column-num: 12 !default;
 $column-gap: 1rem;
 
@@ -14,7 +16,7 @@ desktop breakpoint.
   display: flex;
   flex-wrap: wrap;
 
-	margin: -$column-gap/2;
+	margin: math.div(-$column-gap, 2);
 
   &.is-centered {
     justify-content: center;
@@ -44,15 +46,15 @@ desktop breakpoint.
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-	padding: $column-gap/2;
+	padding: math.div($column-gap, 2);
 
   @for $i from 1 through $column-num {
     &.is-#{$i} {
       flex: none;
-      width: $i/$column-num * 100%;
+      width: math.div($i, $column-num) * 100%;
     }
     &.is-offset-#{$i} {
-      margin-left: $i/$column-num * 100%;
+      margin-left: math.div($i, $column-num) * 100%;
     }
   }
 
@@ -61,10 +63,10 @@ desktop breakpoint.
       @for $i from 1 through $column-num {
         &.is-#{$i}-#{$name} {
           flex: none;
-          width: $i/$column-num * 100%;
+          width: math.div($i, $column-num) * 100%;
         }
         &.is-offset-#{$i}-#{$name} {
-          margin-left: $i/$column-num * 100%;
+          margin-left: math.div($i, $column-num) * 100%;
         }
       }
     }
