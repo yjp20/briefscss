@@ -67,23 +67,6 @@ body {
 	}
 }
 
-a:not(.no-link) {
-	color: $link;
-	text-decoration: none;
-	margin: -1px -1px;
-	padding: 1px 1px;
-	border-radius: $radius;
-
-	&:hover {
-		background-color: $link-background;
-	}
-}
-
-a.no-link {
-	color: unset;
-	text-decoration: unset;
-}
-
 b {
 	font-weight: 700;
 }
