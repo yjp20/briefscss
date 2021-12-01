@@ -16,6 +16,8 @@ $button-hover-background-color: $hover-background !default;
 	border-color: $button-border;
   border-radius: $radius;
   cursor: pointer;
+	font-family: inherit;
+	font-size: 0.875em;
   justify-content: center;
   text-align: center;
   white-space: nowrap;
