@@ -10,25 +10,26 @@ $button-padding-horizontal: 0.75em !default;
 $button-hover-background-color: $hover-background !default;
 
 .button:not(.is-link) {
-  box-sizing: border-box;
+	display: inline-block;
+	box-sizing: border-box;
 	border-width: 1px;
 	border-style: solid;
 	border-color: $button-border;
-  border-radius: $radius;
-  cursor: pointer;
+	border-radius: $radius;
+	cursor: pointer;
 	font-family: inherit;
 	font-size: 0.875em;
-  justify-content: center;
-  text-align: center;
-  white-space: nowrap;
-  padding: $button-padding-vertical $button-padding-horizontal;
-  background-color: rgba(var(--b), 1);
+	justify-content: center;
+	text-align: center;
+	white-space: nowrap;
+	padding: $button-padding-vertical $button-padding-horizontal;
+	background-color: rgba(var(--b), 1);
 
 	&:hover {
 		background: $button-hover-background-color;
 	}
 
-  @each $name, $color in map.merge($greyscale, $colors) {
+	@each $name, $color in map.merge($greyscale, $colors) {
 		&.is-#{$name} {
 			background-color: $color;
 			border-color: get-dark($color);
