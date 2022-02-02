@@ -1,6 +1,6 @@
 {
 	"name": "briefscss",
-	"version": "2.6.0",
+	"version": "2.6.1",
 	"description": "Briefs is inspired by Bulma but made to be simpler and more flexible.",
 	"main": "css/briefs.css",
 	"repository": {
