@@ -1,7 +1,9 @@
 .link,
 a:not(.no-link) {
+	background-color: unset;
 	color: $link;
 	text-decoration: none;
+	cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;

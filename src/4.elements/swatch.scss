@@ -13,11 +13,31 @@
 		margin-right: 0.5em;
 	}
 
-  @each $name, $color in map.merge($greyscale, $colors) {
+  @each $name, $color in $greyscale {
 		&.is-#{$name} {
 			background-color: $color;
 			border-color: scale-color($color, $lightness: -20%, $saturation: -50%);
 			color: choose-contrast-color($color);
+		}
+	}
+
+  @each $name, $color in $colors {
+		&.is-#{$name}-light {
+			background-color: get-light($color);
+			border-color: scale-color(get-light($color), $lightness: -20%, $saturation: -50%);
+			color: choose-contrast-color(get-light($color));
+		}
+
+		&.is-#{$name} {
+			background-color: $color;
+			border-color: scale-color($color, $lightness: -20%, $saturation: -50%);
+			color: choose-contrast-color($color);
+		}
+
+		&.is-#{$name}-dark {
+			background-color: get-dark($color);
+			border-color: scale-color(get-dark($color), $lightness: -20%, $saturation: -50%);
+			color: choose-contrast-color(get-dark($color));
 		}
 	}
 }

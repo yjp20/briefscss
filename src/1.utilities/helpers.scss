@@ -316,9 +316,9 @@ $linear-channel-values:
 }
 
 @function get-light($color) {
-	@return color.scale($color, $lightness: +75%);
+	@return color.scale($color, $lightness: +75%, $saturation: -20%);
 }
 
 @function get-dark($color) {
-	@return color.scale($color, $lightness: -20%);
+	@return color.scale($color, $lightness: -30%, $saturation: +50%);
 }

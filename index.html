@@ -18,10 +18,6 @@
 					write your own css. briefscss is more meant to enforce a design system
 					than it is to be a component framework.
 				</p>
-			</div>
-		</div>
-		<div class="section is-small">
-			<div class="container max-width-tablet">
 				<h2 class="title">Concepts</h2>
 				<h3 class="subtitle">Spacing</h3>
 				<p class="paragraph">
@@ -45,50 +41,57 @@
 						<div class="card is-selectable">
 							<div class="card-header">Accents</div>
 							<div class="card-item">
-								<div class="swatch is-lightred"></div>
+								<div class="swatch is-red-light"></div>
 								<div class="swatch is-red"></div>
+								<div class="swatch is-red-dark"></div>
 								<div>
 									<p class="paragraph">Red</p>
 								</div>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-lightorange"></div>
+								<div class="swatch is-orange-light"></div>
 								<div class="swatch is-orange"></div>
+								<div class="swatch is-orange-dark"></div>
 								<div>
 									<p class="paragraph">Orange</p>
 								</div>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-lightyellow"></div>
+								<div class="swatch is-yellow-light"></div>
 								<div class="swatch is-yellow"></div>
+								<div class="swatch is-yellow-dark"></div>
 								<div>
 									<p class="paragraph">Yellow</p>
 								</div>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-lightgreen"></div>
+								<div class="swatch is-green-light"></div>
 								<div class="swatch is-green"></div>
+								<div class="swatch is-green-dark"></div>
 								<div>
 									<p class="paragraph">Green</p>
 								</div>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-lightturquoise"></div>
+								<div class="swatch is-turquoise-light"></div>
 								<div class="swatch is-turquoise"></div>
+								<div class="swatch is-turquoise-dark"></div>
 								<div>
 									<p class="paragraph">Turquoise</p>
 								</div>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-lightblue"></div>
+								<div class="swatch is-blue-light"></div>
 								<div class="swatch is-blue"></div>
+								<div class="swatch is-blue-dark"></div>
 								<div>
 									<p class="paragraph">Blue</p>
 								</div>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-lightpurple"></div>
+								<div class="swatch is-purple-light"></div>
 								<div class="swatch is-purple"></div>
+								<div class="swatch is-purple-dark"></div>
 								<div>
 									<p class="paragraph">Purple</p>
 								</div>
@@ -107,7 +110,7 @@
 								<span>Dark</span>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-greydark"></div>
+								<div class="swatch is-grey-dark"></div>
 								<span>Grey (dark)</span>
 							</div>
 							<div class="card-item">
@@ -115,7 +118,7 @@
 								<span>Grey</span>
 							</div>
 							<div class="card-item">
-								<div class="swatch is-greylight"></div>
+								<div class="swatch is-grey-light"></div>
 								<span>Grey (light)</span>
 							</div>
 							<div class="card-item">
@@ -266,40 +269,54 @@
 						<div class="label is-flat">label</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="section is-small">
-			<div class="container max-width-tablet">
 				<h2 class="title">Layout</h2>
 				<h2 class="subtitle">Columns</h2>
 				<div class="columns">
 					<div class="column">
-						<div class="border r b-light">column</div>
+						<div class="box">.column</div>
 					</div>
 					<div class="column">
-						<div class="border r b-light">column</div>
+						<div class="box">.column</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="section is-small">
-			<div class="container max-width-tablet">
+				<div class="columns">
+					<div class="column is-3">
+						<div class="box">.column.is-3</div>
+					</div>
+					<div class="column is-9">
+						<div class="box">.column.is-9</div>
+					</div>
+				</div>
+				<div class="columns">
+					<div class="column is-3 is-offset-3">
+						<div class="box">.column.is-3.is-offset-3</div>
+					</div>
+					<div class="column is-3">
+						<div class="box">.column.is-3</div>
+					</div>
+				</div>
 				<h2 class="title">Elements</h2>
 				<h2 class="subtitle">Links</h2>
 				<div class="box">
-					<a href="#">Link</a>
+					<p>
+						<a href="#">Link</a>
+						<button class="link">Sus Button</button>
+					</p>
 				</div>
 				<h3 class="subtitle">Button</h3>
 				<div class="box is-vertical">
-					<button class="button">Button</button>
-					<button class="button is-black">Button</button>
-					<button class="button is-red">Button</button>
-					<button class="button is-orange">Button</button>
-					<button class="button is-yellow">Button</button>
-					<button class="button is-green">Button</button>
-					<button class="button is-turquoise">Button</button>
-					<button class="button is-blue">Button</button>
-					<button class="button is-purple">Button</button>
+					<p>
+						<button class="button">Button</button>
+						<button class="button is-black">Button</button>
+						<button class="button is-red">Button</button>
+						<button class="button is-orange">Button</button>
+						<button class="button is-yellow">Button</button>
+						<button class="button is-green">Button</button>
+						<button class="button is-turquoise">Button</button>
+						<button class="button is-blue">Button</button>
+						<button class="button is-purple">Button</button>
+						<a class="button" href="#">Sus Link</a>
+					</p>
 				</div>
 				<h3 class="subtitle">Input</h3>
 				<div class="box is-vertical">

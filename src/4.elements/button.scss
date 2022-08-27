@@ -9,13 +9,14 @@ $button-padding-horizontal: 0.75em !default;
 
 $button-hover-background-color: $hover-background !default;
 
-.button:not(.is-link) {
+.button, a.button {
 	display: inline-block;
 	box-sizing: border-box;
 	border-width: 1px;
 	border-style: solid;
 	border-color: $button-border;
 	border-radius: $radius;
+	color: inherit;
 	cursor: pointer;
 	font-family: inherit;
 	font-size: 0.875em;
@@ -24,6 +25,7 @@ $button-hover-background-color: $hover-background !default;
 	white-space: nowrap;
 	padding: $button-padding-vertical $button-padding-horizontal;
 	background-color: rgba(var(--b), 1);
+	text-decoration: none;
 
 	&:hover {
 		background: $button-hover-background-color;

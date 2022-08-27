@@ -1,17 +1,18 @@
 $family: $family-sans-serif;
 
-$title-size: $size-2 !default;
+$title-size: $size-5 !default;
 $title-weight: bold !default;
 $title-margin-top: 1.5rem !default;
-$title-margin-bottom: 1.5rem !default;
+$title-margin-bottom: 1rem !default;
 
-$subtitle-size: $size-4 !default;
+$subtitle-size: $size-6 !default;
 $subtitle-weight: bold !default;
-$subtitle-margin-top: 2rem !default;
-$subtitle-margin-bottom: 1rem !default;
+$subtitle-margin-top: 1.25rem !default;
+$subtitle-margin-bottom: 0.5rem !default;
+$subtitle-collapse-margin: 1rem !default;
 
-$paragraph-margin-top: 1rem !default;
-$paragraph-margin-bottom: 1rem !default;
+$paragraph-margin-top: 0.5rem !default;
+$paragraph-margin-bottom: 0.5rem !default;
 
 $label-color: map-get($greyscale, "dark") !default;
 $label-font-size: 0.75em !default;
@@ -39,6 +40,10 @@ body {
 
 	@include mt($subtitle-margin-top);
 	@include mb($subtitle-margin-bottom);
+
+	.title + & {
+		@include mt($subtitle-collapse-margin);
+	}
 }
 
 .content p,
