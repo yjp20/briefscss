@@ -1,15 +1,22 @@
 $family: $family-sans-serif !default;
+$family-display: $family-sans-serif !default;
 
-$title-size: $size-5 !default;
+$title-size: $size-4 !default;
 $title-weight: bold !default;
 $title-margin-top: 1.5rem !default;
 $title-margin-bottom: 1rem !default;
 
-$subtitle-size: $size-6 !default;
+$subtitle-size: $size-5 !default;
 $subtitle-weight: bold !default;
 $subtitle-margin-top: 1.25rem !default;
 $subtitle-margin-bottom: 0.5rem !default;
 $subtitle-collapse-margin: 1rem !default;
+
+$subsubtitle-size: $size-6 !default;
+$subsubtitle-weight: bold !default;
+$subsubtitle-margin-top: 1.25rem !default;
+$subsubtitle-margin-bottom: 0.5rem !default;
+$subsubtitle-collapse-margin: 1rem !default;
 
 $paragraph-margin-top: 0.5rem !default;
 $paragraph-margin-bottom: 0.5rem !default;
@@ -24,8 +31,9 @@ body {
 	line-height: 1.15;
 }
 
-.content h1,
+h1,
 .title {
+	font-family: $family-display;
 	font-size: $title-size;
 	font-weight: $title-weight;
 
@@ -33,8 +41,9 @@ body {
 	@include mb($title-margin-bottom);
 }
 
-.content h2,
+h2,
 .subtitle {
+	font-family: $family-display;
 	font-size: $subtitle-size;
 	font-weight: $subtitle-weight;
 
@@ -46,14 +55,18 @@ body {
 	}
 }
 
-.content p,
-.paragraph {
+h3,
+.subsubtitle {
+	font-family: $family-display;
+	font-size: $subsubtitle-size;
+	font-weight: $subsubtitle-weight;
+
 	@include mt($paragraph-margin-top);
 	@include mb($paragraph-margin-bottom);
 }
 
-.content h3 {
-	font-weight: $subtitle-weight;
+p,
+.paragraph {
 	@include mt($paragraph-margin-top);
 	@include mb($paragraph-margin-bottom);
 }
