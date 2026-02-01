@@ -1,6 +1,6 @@
 @use "../1.utilities/variables" as *;
 
-$body-min-width: 300px;
+$body-min-width: 300px !default;
 $body-size: 16px !default;
 
 html {

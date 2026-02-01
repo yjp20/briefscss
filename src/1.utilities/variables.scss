@@ -63,10 +63,10 @@ $speed:          86ms !default;
 $radius-small:   2px !default;
 $radius:         4px !default;
 $radius-large:   10px !default;
-$radius-rounded: 9999px;
+$radius-rounded: 9999px !default;
 
-$shadow:         0 2px 2px rgba(0,0,0,.075);
-$hover-background: map.get($greyscale, "light");
+$shadow:         0 2px 2px rgba(0,0,0,.075) !default;
+$hover-background: map.get($greyscale, "light") !default;
 
 :root {
 	@each $name, $value in $greyscale {

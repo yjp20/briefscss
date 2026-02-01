@@ -3,7 +3,7 @@
 @use "../1.utilities/responsive" as *;
 
 $column-num: 12 !default;
-$column-gap: 1rem;
+$column-gap: 1rem !default;
 
 /*
 

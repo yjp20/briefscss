@@ -1,6 +1,6 @@
-$section-large-padding: 4em;
-$section-medium-padding: 2em;
-$section-small-padding: 2em;
+$section-large-padding: 4em !default;
+$section-medium-padding: 2em !default;
+$section-small-padding: 2em !default;
 
 .section {
 	background-color: rgba(var(--b), 1);
