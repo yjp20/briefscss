@@ -1,15 +1,15 @@
-@import "2.base/general.scss";
-@import "2.base/typography.scss";
-@import "2.base/utils.scss";
-@import "2.base/form.scss";
-@import "2.base/link.scss";
+@forward "2.base/general.scss";
+@forward "2.base/typography.scss";
+@forward "2.base/utils.scss";
+@forward "2.base/form.scss";
+@forward "2.base/link.scss";
 
-@import "3.layout/columns";
-@import "3.layout/container";
-@import "3.layout/section";
+@forward "3.layout/columns";
+@forward "3.layout/container";
+@forward "3.layout/section";
 
-@import "4.elements/button";
-@import "4.elements/box";
-@import "4.elements/swatch";
+@forward "4.elements/button";
+@forward "4.elements/box";
+@forward "4.elements/swatch";
 
-@import "5.components/card";
+@forward "5.components/card";

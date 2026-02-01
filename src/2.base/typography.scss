@@ -1,3 +1,6 @@
+@use "../1.utilities/variables" as *;
+@use "../1.utilities/helpers" as *;
+
 $family: $family-sans-serif !default;
 $family-display: $family-sans-serif !default;
 

@@ -1,4 +1,4 @@
-@import "1.utilities/reset";
-@import "1.utilities/helpers";
-@import "1.utilities/responsive";
-@import "1.utilities/variables";
+@forward "1.utilities/reset";
+@forward "1.utilities/helpers";
+@forward "1.utilities/responsive";
+@forward "1.utilities/variables";

@@ -33,6 +33,6 @@
 		"clean-css-cli": "^4.3.0",
 		"nodemon": "^2.0.7",
 		"postcss-cli": "^7.1.1",
-		"sass": "^1.34.0"
+		"sass": "^1.97.3"
 	}
 }

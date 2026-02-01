@@ -1,3 +1,5 @@
+@use "../1.utilities/variables" as *;
+
 $box-padding: 0.75rem !default;
 $box-background: $background !default;
 $box-border: $border !default;

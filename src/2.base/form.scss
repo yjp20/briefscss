@@ -1,3 +1,6 @@
+@use "../1.utilities/variables" as *;
+@use "../1.utilities/helpers" as *;
+
 $field-margin-top: 0.75rem !default;
 $field-margin-bottom: 0.75rem !default;
 $input-background: $background !default;
