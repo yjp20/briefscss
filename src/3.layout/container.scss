@@ -1,6 +1,5 @@
 @use "sass:map";
-@use "../1.utilities/variables" as *;
-@use "../1.utilities/responsive" as *;
+@use "../init" as *;
 
 $container-override: unset !default;
 

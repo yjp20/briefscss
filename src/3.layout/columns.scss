@@ -1,6 +1,5 @@
 @use "sass:math";
-@use "../1.utilities/variables" as *;
-@use "../1.utilities/responsive" as *;
+@use "../init" as *;
 
 $column-num: 12 !default;
 $column-gap: 1rem !default;

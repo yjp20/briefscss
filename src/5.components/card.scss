@@ -1,6 +1,5 @@
 @use "sass:map";
-@use "../1.utilities/variables" as *;
-@use "../1.utilities/helpers" as *;
+@use "../init" as *;
 
 $card-header-background-color: map.get($greyscale, "light") !default;
 $card-background-color: $background !default;

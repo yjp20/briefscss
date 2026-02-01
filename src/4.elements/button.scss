@@ -1,6 +1,5 @@
 @use "sass:map";
-@use "../1.utilities/variables" as *;
-@use "../1.utilities/helpers" as *;
+@use "../init" as *;
 
 $button-background-color: white !default;
 $button-border: $border !default;
