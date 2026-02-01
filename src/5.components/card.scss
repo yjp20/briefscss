@@ -1,7 +1,8 @@
+@use "sass:map";
 @use "../1.utilities/variables" as *;
 @use "../1.utilities/helpers" as *;
 
-$card-header-background-color: map-get($greyscale, "light");
+$card-header-background-color: map.get($greyscale, "light");
 $card-background-color: $background !default;
 $card-padding: 0.75rem !default;
 $card-border: $border !default;

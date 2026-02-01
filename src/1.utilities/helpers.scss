@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:list";
 @use "sass:math";
 
 @mixin mt($margin) {
@@ -289,9 +290,9 @@ $linear-channel-values:
   1;
 
 @function luminance($color) {
-  $red: nth($linear-channel-values, red($color) + 1);
-  $green: nth($linear-channel-values, green($color) + 1);
-  $blue: nth($linear-channel-values, blue($color) + 1);
+  $red: list.nth($linear-channel-values, math.round(color.channel($color, "red", $space: rgb)) + 1);
+  $green: list.nth($linear-channel-values, math.round(color.channel($color, "green", $space: rgb)) + 1);
+  $blue: list.nth($linear-channel-values, math.round(color.channel($color, "blue", $space: rgb)) + 1);
 
   @return .2126 * $red + .7152 * $green + .0722 * $blue;
 }

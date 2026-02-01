@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../1.utilities/variables" as *;
 @use "../1.utilities/helpers" as *;
 
@@ -24,7 +25,7 @@ $subsubtitle-collapse-margin: 1rem !default;
 $paragraph-margin-top: 0.5rem !default;
 $paragraph-margin-bottom: 0.5rem !default;
 
-$label-color: map-get($greyscale, "dark") !default;
+$label-color: map.get($greyscale, "dark") !default;
 $label-font-size: 0.75em !default;
 $label-margin-top: 0.5rem !default;
 $label-margin-bottom: 0.5rem !default;

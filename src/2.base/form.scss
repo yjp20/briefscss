@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../1.utilities/variables" as *;
 @use "../1.utilities/helpers" as *;
 
@@ -35,7 +36,7 @@ $textarea-min-height: 8em !default;
 	}
 
 	&:disabled {
-		background-color: map-get($greyscale, "greylight");
+		background-color: map.get($greyscale, "greylight");
 	}
 }
 

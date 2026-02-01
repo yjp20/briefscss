@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:map";
 
 $breakpoint-gap: 16px !default;
 
@@ -31,14 +32,14 @@ $colors: (
 	"purple":         hsl(271, 68%, 48%),
 )!default;
 
-$text:                map-get($greyscale, "black") !default;
-$background:          map-get($greyscale, "white") !default;
-$border:              map-get($greyscale, "grey") !default;
+$text:                map.get($greyscale, "black") !default;
+$background:          map.get($greyscale, "white") !default;
+$border:              map.get($greyscale, "grey") !default;
 $border-width:        1px !default;
 
-$accent:              map-get($colors, "blue") !default;
-$link:                get-dark(map-get($colors, "blue")) !default;
-$link-background:     get-light(map-get($colors, "blue")) !default;
+$accent:              map.get($colors, "blue") !default;
+$link:                get-dark(map.get($colors, "blue")) !default;
+$link-background:     get-light(map.get($colors, "blue")) !default;
 
 $family-sans-serif: "IBM Plex Sans", "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
   "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -65,7 +66,7 @@ $radius-large:   10px !default;
 $radius-rounded: 9999px;
 
 $shadow:         0 2px 2px rgba(0,0,0,.075);
-$hover-background: map-get($greyscale, "light");
+$hover-background: map.get($greyscale, "light");
 
 :root {
 	@each $name, $value in $greyscale {

@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../1.utilities/variables" as *;
 @use "../1.utilities/responsive" as *;
 
@@ -17,7 +18,7 @@ $container-override: unset !default;
 		}
 		@else {
 			@include gt($bp) {
-				width: map-get($container-override, $name);
+				width: map.get($container-override, $name);
 			}
 		}
 	}
