@@ -4,19 +4,21 @@
 $family: $family-sans-serif !default;
 $family-display: $family-sans-serif !default;
 
+$display-weight: bold !default;
+
 $title-size: $size-4 !default;
-$title-weight: bold !default;
+$title-weight: $display-weight !default;
 $title-margin-top: 1.5rem !default;
 $title-margin-bottom: 1rem !default;
 
 $subtitle-size: $size-5 !default;
-$subtitle-weight: bold !default;
+$subtitle-weight: $display-weight !default;
 $subtitle-margin-top: 1.25rem !default;
 $subtitle-margin-bottom: 0.5rem !default;
 $subtitle-collapse-margin: 1rem !default;
 
 $subsubtitle-size: $size-6 !default;
-$subsubtitle-weight: bold !default;
+$subsubtitle-weight: $display-weight !default;
 $subsubtitle-margin-top: 1.25rem !default;
 $subsubtitle-margin-bottom: 0.5rem !default;
 $subsubtitle-collapse-margin: 1rem !default;
@@ -29,77 +31,100 @@ $label-font-size: 0.75em !default;
 $label-margin-top: 0.5rem !default;
 $label-margin-bottom: 0.5rem !default;
 
+$hr-color: $border !default;
+$hr-margin-top: 1.5rem !default;
+$hr-margin-bottom: 1.5rem !default;
+
 body {
-	font-family: $family;
-	line-height: 1.15;
+  font-family: $family;
+  line-height: 1.15;
+}
+
+.display {
+  font-family: $family-display;
+  font-weight: $display-weight;
 }
 
 h1,
 .title {
-	font-family: $family-display;
-	font-size: $title-size;
-	font-weight: $title-weight;
+  font-family: $family-display;
+  font-size: $title-size;
+  font-weight: $title-weight;
 
-	@include mt($title-margin-top);
-	@include mb($title-margin-bottom);
+  @include mt($title-margin-top);
+  @include mb($title-margin-bottom);
 }
 
 h2,
 .subtitle {
-	font-family: $family-display;
-	font-size: $subtitle-size;
-	font-weight: $subtitle-weight;
+  font-family: $family-display;
+  font-size: $subtitle-size;
+  font-weight: $subtitle-weight;
 
-	@include mt($subtitle-margin-top);
-	@include mb($subtitle-margin-bottom);
+  @include mt($subtitle-margin-top);
+  @include mb($subtitle-margin-bottom);
 
-	.title + & {
-		@include mt($subtitle-collapse-margin);
-	}
+  .title + & {
+    @include mt($subtitle-collapse-margin);
+  }
 }
 
 h3,
 .subsubtitle {
-	font-family: $family-display;
-	font-size: $subsubtitle-size;
-	font-weight: $subsubtitle-weight;
+  font-family: $family-display;
+  font-size: $subsubtitle-size;
+  font-weight: $subsubtitle-weight;
 
-	@include mt($paragraph-margin-top);
-	@include mb($paragraph-margin-bottom);
+  @include mt($paragraph-margin-top);
+  @include mb($paragraph-margin-bottom);
 }
 
 p,
 .paragraph {
-	@include mt($paragraph-margin-top);
-	@include mb($paragraph-margin-bottom);
+  @include mt($paragraph-margin-top);
+  @include mb($paragraph-margin-bottom);
 }
 
 .label {
-	color: $label-color;
-	font-size: $label-font-size;
+  color: $label-color;
+  font-size: $label-font-size;
 
-	@include mt($label-margin-top);
-	@include mb($label-margin-bottom);
+  @include mt($label-margin-top);
+  @include mb($label-margin-bottom);
 
-	&.is-caps {
-		text-transform: uppercase;
-		letter-spacing: 0.23em;
-		transform: scale(1, 0.95);
-	}
+  &.is-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.23em;
+    transform: scale(1, 0.95);
+  }
 }
 
 b {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 button {
-	font-size: 1em;
+  font-size: 1em;
 }
 
 em {
-	font-style: italic;
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }
 
 label {
-	display: block;
+  display: block;
+}
+
+hr {
+  border: 0;
+  border-color: $hr-color;
+  border-style: solid;
+  border-top-width: 1px;
+
+  @include mt($hr-margin-top);
+  @include mb($hr-margin-bottom);
 }
